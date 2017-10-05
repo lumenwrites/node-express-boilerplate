@@ -1,0 +1,23 @@
+{
+   "name": "reveal",
+   "version": "1.0.0",
+   "description": "",
+   "main": "server.js",
+   "scripts": {
+      "start": "nodemon server.js",
+      "compass-watch": "cd ./static/styles && compass watch",
+      "webpack-watch": "cd ./static/js && webpack -w",
+      "dev": "concurrently --kill-others \"npm run compass-watch\" \"npm run webpack-watch\" \"npm run start\""
+   },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "body-parser": "^1.18.0",
+      "ejs": "^2.5.7",
+      "express": "^4.15.4",
+      "marked": "^0.3.6"
+   },
+   "devDependencies": {
+      "concurrently": "^3.5.0"
+   }
+}
